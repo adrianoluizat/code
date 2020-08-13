@@ -1,0 +1,522 @@
+git init
+
+git add <nome do arquivo>
+
+git commit -m "versao 1"
+
+git add . <versiona tudo que estiver na pasta atual>
+
+git commit -m "mudancas v1"
+
+git status <mostra mudanças>
+
+git show <histórico>
+
+git log <histórico ações>
+
+git push <utilizando o github, enviar o código da sua máquina para nuvem>
+
+git pull <pega o código na nuvem e traz para sua máquina>
+
+
+********************
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 ~
+$ pwd
+/c/Users/Adriano Luiz
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 ~
+$ cd ..
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/Users
+$ pwd
+/c/Users
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/Users
+$ cd ..
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c
+$ pwd
+/c
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c
+$ cd adr
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr
+$ pwd
+/c/adr
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr
+$ cd varios
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios
+$ cd code
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code
+$ cd code5k
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k
+$ cd git_github
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ pwd
+/c/adr/varios/code/code5k/git_github
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ cls
+bash: cls: command not found
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ ls
+git_comandos_detalhes
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ dir
+git_comandos_detalhes
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ touch biografia.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ ls
+biografia.txt  git_comandos_detalhes
+
+**************************** COMANDOS PRINCIPAIS
+git init >>>STAGING>>>REPISTITÓRIO>>/.git/
+UNTRACKING
+git add. >>>TODOS OS ARQUIVOS PARA ZONA STAGING
+TRACKER
+>>>neste momento os arquivos estão na zona STAGING
+>>>é uma zona temporária
+
+>>>agora mandar da zona STAGING ao nosso repositório
+git commit -m "mensagem v1"
+
+>>>agora o arquivo está devidamente salvo no repositório
+
+>>>mudanças do arquivo ele volta ao estado UNTRACKING
+>>>usamos novamente o COMANDO: git add. para envia a zona STAGING
+
+>>>se quisermos enviar da zona STAGING para o repositório, usamos o COMANDO
+git commit -m "mensagem v2"
+
+>>>assim foi gerado um novo ponto na linha do temporária
+>>>podemos fazer o que quizermos na linha do git
+
+*****************************************
+>>>O que é um BRANCH e como funciona um merge em Git?
+branch são fluxos alternativos de nossos códigos
+MASTER
+BRANCH PRINCIPAL ONDE O FLUXO DO PROGRAMA COMEÇA
+V1_______V2(a diferença de um e outro chamamos de COMMIT)
+V1_______V2_______V3(vc vê que precisa modificar)______________(V3.1) VERSÃO FINAL (HEAD VERSÃO MAIS ATUALIZADA)
+EXPERIMENTO
+EXPERIMENTAR MODIFICAÇÕES
+_________________V3______COMMITS_______V4_______V5
+
+BUGFIX
+CORRIGIR PROBLEMAS QUE SÃO GERADOS AO LONGO DO CÓDIGO
+_________________V3.1MERGE(CÓDIGO ENVIADO DO BRAND BUGFIX PARA O MASTER)
+
+
+**********************************
+
+EX:
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ mkdir portifolio
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ ls
+git_comandos_detalhes  portifolio/
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github
+$ cd portifolio
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ pwd
+/c/adr/varios/code/code5k/git_github/portifolio
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ touch leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ ls
+leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ code leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ ls -la
+total 0
+drwxr-xr-x 1 Adriano Luiz 197121 0 jul 25 21:14 ./
+drwxr-xr-x 1 Adriano Luiz 197121 0 jul 25 21:13 ../
+-rw-r--r-- 1 Adriano Luiz 197121 0 jul 25 21:14 leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio
+$ git init
+Initialized empty Git repository in C:/ADR/VARIOS/CODE/CODE5K/git_github/portifolio/.git/
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ cd .git
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio/.git (GIT_DIR!)
+$ ls -la
+total 11
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 ./
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 ../
+-rw-r--r-- 1 Adriano Luiz 197121 130 jul 25 21:16 config
+-rw-r--r-- 1 Adriano Luiz 197121  73 jul 25 21:16 description
+-rw-r--r-- 1 Adriano Luiz 197121  23 jul 25 21:16 HEAD
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 hooks/
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 info/
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 objects/
+drwxr-xr-x 1 Adriano Luiz 197121   0 jul 25 21:16 refs/
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio/.git (GIT_DIR!)
+$ cd ..
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$
+
+***********
+realizando as configurações de usuários
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git config --global user.name "adrianoluizat"
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git config --global user.name "adrianoluizat"^C
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ^C
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git config --global user.name "adrianoluizat"
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git config --global user.email "aarontecbr@gmail.com"
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+pull.rebase=false
+credential.helper=osxeychain
+user.name=adrianoluizat
+user.email=aarontecbr@gmail.com
+core.editor=code --wait
+push.followtags=true
+alias.c=!git add --all && git commit -m
+alias.s=!git status -s
+alias.l=!git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+alias.amend=!git add --all && git commit --amend --no-edit
+alias.count=!git shortlog -s --grep
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+****************************************
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ls -l
+total 0
+-rw-r--r-- 1 Adriano Luiz 197121 0 jul 25 21:14 leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ls -a
+./  ../  .git/  leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ^C
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ls
+leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        leiame.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git add leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   leiame.txt
+
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$
+
+***saindo do STAGING/STAGE
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git rm --cached leiame.txt
+rm 'leiame.txt'
+
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git add leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   leiame.txt
+
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git commit -m "inserir o arquivo leiame.txt"
+[master (root-commit) c96fe8d] inserir o arquivo leiame.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   leiame.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git add .
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git commit -m "Agora meu segundo commit"
+[master 942fbd3] Agora meu segundo commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit 942fbd37c18b2c45e1bb330c226df1149e0c1a5b (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:09:54 2020 -0300
+
+    Agora meu segundo commit
+
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+    inserir o arquivo leiame.txt
+
+************
+Verificando as mudanças de um commit
+fazer a revisão de tudo que foi feito
+
+
+fiz modificação do arquivo exemplo (leiame.txt)
+adicionando o arquivo na zona de staged
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git add leiame.txt
+
+comite arquivo
+só o comando  > git commit > no meu vai para o vc code e de pois ao salavar volta para linha de COMANDO
+
+comparando mudanças entre dois commits diferentes
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git diff c96fe8db957ba3854b4884b39f2eae319b7beaa8 02050f1f295f47d1824bbaccd7d339ddb11a5f54
+
+Viajando no tempo em nosso repositório utilizando Branches e Checkout
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ ls
+leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit 02050f1f295f47d1824bbaccd7d339ddb11a5f54 (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sun Jul 26 14:45:14 2020 -0300
+
+    Que tá chique o GIT
+
+    Fazendo o curso e versionando
+    com sucesso
+
+commit 942fbd37c18b2c45e1bb330c226df1149e0c1a5b
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:09:54 2020 -0300
+
+    Agora meu segundo commit
+
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+    inserir o arquivo leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git reset --soft c96fe8db957ba3854b4884b39f2eae319b7beaa8
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8 (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+    inserir o arquivo leiame.txt
+
+voltando para as alterações que deseja e apagando restantes
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git reset --hard c96fe8db957ba3854b4884b39f2eae319b7beaa8
+HEAD is now at c96fe8d inserir o arquivo leiame.txt
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8 (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+    inserir o arquivo leiame.txt
+
+dando uma olhadinha em um commit anterior, mas sem descartar seu histórico de Git
+criando um arquivo diretamente no vscode
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ code README.md
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git add .
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git commit -m "\adicionei o arquivo README.md"
+[master a6c8fd2] \adicionei o arquivo README.md
+1 file changed, 3 insertions(+)
+create mode 100644 README.md
+
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit a6c8fd2698bb584bdd95687df6d2bc23c078c5ab (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sun Jul 26 15:12:24 2020 -0300
+
+      \adicionei o arquivo README.md
+
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+      inserir o arquivo leiame.txt
+Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+$ git log
+commit a6c8fd2698bb584bdd95687df6d2bc23c078c5ab (HEAD -> master)
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sun Jul 26 15:12:24 2020 -0300
+
+    \adicionei o arquivo README.md
+
+commit c96fe8db957ba3854b4884b39f2eae319b7beaa8
+Author: adrianoluizat <aarontecbr@gmail.com>
+Date:   Sat Jul 25 22:04:32 2020 -0300
+
+      inserir o arquivo leiame.txt
+
+      Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+      $ code LINGUAGENS.md
+
+      Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+      $ git status
+      On branch master
+      Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+              modified:   README.md
+
+      Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+              LINGUAGENS.md
+
+
+      Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+      $ git status
+      On branch master
+      Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+              modified:   README.md
+
+      Changes not staged for commit:
+        (use "git add <file>..." to update what will be committed)
+        (use "git restore <file>..." to discard changes in working directory)
+              modified:   README.md
+
+      Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+              LINGUAGENS.md
+
+
+      Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+      $ git add .
+
+      Adriano Luiz@LAPTOP-HKKBQ8KT MINGW64 /c/adr/varios/code/code5k/git_github/portifolio (master)
+      $ git status
+      On branch master
+      Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+              new file:   LINGUAGENS.md
+              modified:   README.md
