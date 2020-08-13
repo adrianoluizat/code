@@ -1,0 +1,13 @@
+
+VENV-PASTA DOS PROJETOS
+
+Microsoft Windows [versão 10.0.18362.959]
+(c) 2019 Microsoft Corporation. Todos os direitos reservados.
+
+C:\ADR\VARIOS\CODE\CODE10K\PY>python -m venv venv
+
+C:\ADR\VARIOS\CODE\CODE10K\PY>
+
+ATIVANDO O AMBIENTE VIRTUAL:
+
+venv\Scripts\activate.bat
